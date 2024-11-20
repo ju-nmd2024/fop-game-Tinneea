@@ -195,16 +195,32 @@ function mouseClicked() {
     mouseX > 200 &&
     mouseX < 400 &&
     mouseY > 500 &&
-    mouseY < 600 
+    mouseY < 600
   ) {
     gameState = "playing";
     gravity = 0.1;
     speed = 0.5;
-  } else if (gameState === "gameOver" && mouseX > 200 && mouseX < 400 && mouseY > 200 && mouseY < 400){
+  } else if (
+    gameState === "gameOver" &&
+    mouseX > 200 &&
+    mouseX < 400 &&
+    mouseY > 200 &&
+    mouseY < 400
+  ) {
+    gameState = "start";
+    gravity = 0.1;
+    speed = 0.5;
+    y = 100;
+  } else if (
+    gameState === "gameSucceeded" &&
+    mouseX > 200 &&
+    mouseX < 400 &&
+    mouseY > 200 &&
+    mouseY < 400
+  ) {
     gameState = "start";
     gravity = 0.1;
     speed = 0.5;
     y = 100;
   }
-
 }
