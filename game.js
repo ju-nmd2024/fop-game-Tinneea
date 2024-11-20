@@ -1,7 +1,7 @@
 function setup() {
   createCanvas(600, 750);
 }
-let gameState = "gameOver";
+let gameState = "start";
 let gravity = 0.1;
 let speed = 0.5;
 let groundY;
